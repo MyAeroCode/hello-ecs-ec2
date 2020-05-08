@@ -1,0 +1,12 @@
+version: "3"
+services:
+  web:
+    image: 702902445118.dkr.ecr.ap-northeast-2.amazonaws.com/hello-express-image
+    ports:
+      - "80:80"
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: hello-express-cluster
+        awslogs-region: ap-northeast-2
+        awslogs-stream-prefix: web
